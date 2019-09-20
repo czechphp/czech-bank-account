@@ -1,0 +1,35 @@
+#!/usr/bin/env php
+<?php
+
+/**
+ * Updates default bank code data
+ */
+
+use Czechphp\CzechBankAccount\Loader\BankCode\FileGetContentsLoader;
+
+set_time_limit(0);
+
+require __DIR__ . '/../vendor/autoload.php';
+
+if (isset($_SERVER['argv'][1])) {
+    $filename = $_SERVER['argv'][1];
+} else {
+    $filename = __DIR__ . '/../data/bank-codes.json';
+}
+
+fwrite(STDERR, sprintf("Writing into path %s\n", $filename));
+
+$loader = new FileGetContentsLoader();
+$content = $loader->load();
+
+$json = json_encode($content, JSON_PRETTY_PRINT);
+
+if ($json === false) {
+    fwrite(STDERR, sprintf("Failed to encode json. %s\n", json_last_error_msg()));
+    die(1);
+}
+
+if (false === file_put_contents($filename, $json, LOCK_EX)) {
+    fwrite(STDERR, "Failed to write into file.\n");
+    die(1);
+}
