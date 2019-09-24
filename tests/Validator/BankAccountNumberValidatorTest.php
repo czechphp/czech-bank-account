@@ -21,14 +21,15 @@ class BankAccountNumberValidatorTest extends TestCase
      * @dataProvider validProvider
      *
      * @param string $value
+     * @param array $options
      */
-    public function testValid(string $value)
+    public function testValid(string $value, array $options = [])
     {
         $validator = new BankAccountNumberValidator();
 
         $this->assertSame(
             BankAccountNumberValidator::ERROR_NONE,
-            $validator->validate($value)
+            $validator->validate($value, $options)
         );
     }
 
@@ -41,6 +42,8 @@ class BankAccountNumberValidatorTest extends TestCase
             // smallest possible number
             ['19'],
             ['19-19'],
+            ['0000000000000019', ['type' => 'constant']],
+            ['0000190000000019', ['type' => 'constant']],
             // random valid numbers
             ['227104082'],
             ['19-2000145399'],
