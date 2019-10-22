@@ -88,9 +88,79 @@ if ($violation === SpecificSymbolValidator::ERROR_NONE) {
 
 ### Constant Symbol Validator
 
-TODO
+> Czech: Validátor konstantního symbolu
 
-### Bank Code Loader
+In default validates only format of constant symbol.
+
+```php
+<?php
+
+use Czechphp\CzechBankAccount\Validator\ConstantSymbolValidator;
+
+$validator = new ConstantSymbolValidator();
+$violation = $validator->validate('0006');
+
+if ($violation === ConstantSymbolValidator::ERROR_NONE) {
+    // valid
+}
+```
+
+To use optional validation against database of known constant symbols, 
+validator needs `Filter` instance in the constructor and `filter` option in the `validate` methods call.
+
+```php
+<?php
+
+use Czechphp\CzechBankAccount\ConstantSymbol\Filter\ArrayCacheFilter;
+use Czechphp\CzechBankAccount\ConstantSymbol\Filter\Filter;
+use Czechphp\CzechBankAccount\ConstantSymbol\Loader\ArrayRequireLoader;
+use Czechphp\CzechBankAccount\Validator\ConstantSymbolValidator;
+
+$filter = new ArrayCacheFilter(new Filter(new ArrayRequireLoader()));
+$validator = new ConstantSymbolValidator($filter);
+$violation = $validator->validate('0006', [
+    'filter' => ['include' => ['all']],
+]);
+
+if ($violation === ConstantSymbolValidator::ERROR_NONE) {
+    // valid
+}
+```
+
+### Constant Symbol Component
+
+Loads list of known constant symbols and filters out specified categories and symbols.
+
+In the provided database of constant symbols groups `all`, `public` and `restricted` are used.
+
+* group `all` contains all symbols without exception
+* group `public` contains symbols that are safe to use by public
+* group `restricted` contains symbols that only banks or government is allowed to use
+
+Note that provided database of known constant symbols may be incomplete or restriction groups may be incorrectly set.
+The reason is that it is complicated to obtain up to date list of constant symbols and the fact that constant symbols are slowly deprecated by the government.
+This database exist so that it is possible to restrict user from entering constant symbol that public is not allowed to use. 
+
+#### ArrayRequireLoader
+
+In default loads data bundled with library, but can be set to read from any file.
+
+#### Filter
+
+Filters loaded data.
+
+Filter criteria is divided into filters include and exclude.
+Both filters accept group names and individual constant symbol codes.
+
+For example criteria `['include' => ['public', 'restricted'], 'exclude' => ['5']]` will return list of symbols that are part of of groups `public` and/or `restricted` while symbol `5` is excluded from the list.
+
+#### ArrayCacheFilter
+
+Caches result of latest criteria.
+
+It is recommended to use at least array cache due to the size of the list of known constant symbols. Loading and filtering of the list can take up to tens of milliseconds.
+
+### Bank Code Component
 
 Loads directory of payment system codes.
 
