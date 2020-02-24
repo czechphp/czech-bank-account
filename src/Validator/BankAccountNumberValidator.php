@@ -122,7 +122,7 @@ final class BankAccountNumberValidator implements ValidatorInterface
 
     private function hasAtLeastTwoNonZeroDigits(string $string): bool
     {
-        if (preg_match('/[1-9]{2,}/', $string) === 1) {
+        if (preg_match('/(?>0*[1-9]0*){2,}/', $string) === 1) {
             return true;
         }
 

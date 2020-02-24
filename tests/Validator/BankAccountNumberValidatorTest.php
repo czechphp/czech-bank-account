@@ -48,6 +48,7 @@ class BankAccountNumberValidatorTest extends TestCase
             ['227104082'],
             ['19-2000145399'],
             ['178124-4159'],
+            ['318-203'],
         ];
     }
 
