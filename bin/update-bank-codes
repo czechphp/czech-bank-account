@@ -22,7 +22,7 @@ fwrite(STDERR, sprintf("Writing into path %s\n", $filename));
 $loader = new FileGetContentsLoader();
 $content = $loader->load();
 
-$json = json_encode($content, JSON_PRETTY_PRINT);
+$json = json_encode($content, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
 
 if ($json === false) {
     fwrite(STDERR, sprintf("Failed to encode json. %s\n", json_last_error_msg()));

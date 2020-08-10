@@ -1,13 +1,13 @@
 [
     [
         "0100",
-        "Komer\u010dn\u00ed banka, a.s.",
+        "Komerční banka, a.s.",
         "KOMBCZPP",
         true
     ],
     [
         "0300",
-        "\u010ceskoslovensk\u00e1 obchodn\u00ed banka, a. s.",
+        "Československá obchodní banka, a. s.",
         "CEKOCZPP",
         true
     ],
@@ -19,13 +19,13 @@
     ],
     [
         "0710",
-        "\u010cESK\u00c1 N\u00c1RODN\u00cd BANKA",
+        "ČESKÁ NÁRODNÍ BANKA",
         "CNBACZPP",
         true
     ],
     [
         "0800",
-        "\u010cesk\u00e1 spo\u0159itelna, a.s.",
+        "Česká spořitelna, a.s.",
         "GIBACZPX",
         true
     ],
@@ -43,13 +43,13 @@
     ],
     [
         "2030",
-        "\u010ceskoslovensk\u00e9 \u00fav\u011brn\u00ed dru\u017estvo",
+        "Československé úvěrní družstvo",
         null,
         true
     ],
     [
         "2060",
-        "Citfin, spo\u0159iteln\u00ed dru\u017estvo",
+        "Citfin, spořitelní družstvo",
         "CITFCZPP",
         true
     ],
@@ -61,25 +61,25 @@
     ],
     [
         "2100",
-        "Hypote\u010dn\u00ed banka, a.s.",
+        "Hypoteční banka, a.s.",
         null,
         true
     ],
     [
         "2200",
-        "Pen\u011b\u017en\u00ed d\u016fm, spo\u0159iteln\u00ed dru\u017estvo",
+        "Peněžní dům, spořitelní družstvo",
         null,
         true
     ],
     [
         "2220",
-        "Artesa, spo\u0159iteln\u00ed dru\u017estvo",
+        "Artesa, spořitelní družstvo",
         "ARTTCZPP",
         true
     ],
     [
         "2240",
-        "Po\u0161tov\u00e1 banka, a.s., pobo\u010dka \u010cesk\u00e1 republika",
+        "Poštová banka, a.s., pobočka Česká republika",
         "POBNCZPP",
         true
     ],
@@ -91,19 +91,19 @@
     ],
     [
         "2260",
-        "NEY spo\u0159iteln\u00ed dru\u017estvo",
+        "NEY spořitelní družstvo",
         null,
         true
     ],
     [
         "2275",
-        "Podnikatelsk\u00e1 dru\u017estevn\u00ed z\u00e1lo\u017ena",
+        "Podnikatelská družstevní záložna",
         null,
         false
     ],
     [
         "2600",
-        "Citibank Europe plc, organiza\u010dn\u00ed slo\u017eka",
+        "Citibank Europe plc, organizační složka",
         "CITICZPX",
         true
     ],
@@ -121,7 +121,7 @@
     ],
     [
         "3050",
-        "BNP Paribas Personal Finance SA, od\u0161t\u011bpn\u00fd z\u00e1vod",
+        "BNP Paribas Personal Finance SA, odštěpný závod",
         "BPPFCZP1",
         true
     ],
@@ -145,7 +145,7 @@
     ],
     [
         "4300",
-        "\u010ceskomoravsk\u00e1 z\u00e1ru\u010dn\u00ed a rozvojov\u00e1 banka, a.s.",
+        "Českomoravská záruční a rozvojová banka, a.s.",
         "CMZRCZP1",
         true
     ],
@@ -175,25 +175,25 @@
     ],
     [
         "6200",
-        "COMMERZBANK Aktiengesellschaft, pobo\u010dka Praha",
+        "COMMERZBANK Aktiengesellschaft, pobočka Praha",
         "COBACZPX",
         true
     ],
     [
         "6210",
-        "mBank S.A., organiza\u010dn\u00ed slo\u017eka",
+        "mBank S.A., organizační složka",
         "BREXCZPP",
         true
     ],
     [
         "6300",
-        "BNP Paribas S.A., pobo\u010dka \u010cesk\u00e1 republika",
+        "BNP Paribas S.A., pobočka Česká republika",
         "GEBACZPP",
         true
     ],
     [
         "6700",
-        "V\u0161eobecn\u00e1 \u00faverov\u00e1 banka a.s., pobo\u010dka Praha",
+        "Všeobecná úverová banka a.s., pobočka Praha",
         "SUBACZPP",
         true
     ],
@@ -205,7 +205,7 @@
     ],
     [
         "7910",
-        "Deutsche Bank Aktiengesellschaft Filiale Prag, organiza\u010dn\u00ed slo\u017eka",
+        "Deutsche Bank Aktiengesellschaft Filiale Prag, organizační složka",
         "DEUTCZPX",
         true
     ],
@@ -217,61 +217,61 @@
     ],
     [
         "7950",
-        "Raiffeisen stavebn\u00ed spo\u0159itelna a.s.",
+        "Raiffeisen stavební spořitelna a.s.",
         null,
         true
     ],
     [
         "7960",
-        "\u010ceskomoravsk\u00e1 stavebn\u00ed spo\u0159itelna, a.s.",
+        "Českomoravská stavební spořitelna, a.s.",
         null,
         true
     ],
     [
         "7970",
-        "W\u00fcstenrot - stavebn\u00ed spo\u0159itelna a.s.",
+        "MONETA Stavební Spořitelna, a.s.",
         null,
         true
     ],
     [
         "7980",
-        "W\u00fcstenrot hypote\u010dn\u00ed banka a.s.",
+        "Wüstenrot hypoteční banka a.s.",
         null,
         true
     ],
     [
         "7990",
-        "Modr\u00e1 pyramida stavebn\u00ed spo\u0159itelna, a.s.",
+        "Modrá pyramida stavební spořitelna, a.s.",
         null,
         true
     ],
     [
         "8030",
-        "Volksbank Raiffeisenbank Nordoberpfalz eG pobo\u010dka Cheb",
+        "Volksbank Raiffeisenbank Nordoberpfalz eG pobočka Cheb",
         "GENOCZ21",
         true
     ],
     [
         "8040",
-        "Oberbank AG pobo\u010dka \u010cesk\u00e1 republika",
+        "Oberbank AG pobočka Česká republika",
         "OBKLCZ2X",
         true
     ],
     [
         "8060",
-        "Stavebn\u00ed spo\u0159itelna \u010cesk\u00e9 spo\u0159itelny, a.s.",
+        "Stavební spořitelna České spořitelny, a.s.",
         null,
         true
     ],
     [
         "8090",
-        "\u010cesk\u00e1 exportn\u00ed banka, a.s.",
+        "Česká exportní banka, a.s.",
         "CZEECZPP",
         true
     ],
     [
         "8150",
-        "HSBC France - pobo\u010dka Praha",
+        "HSBC France - pobočka Praha",
         "MIDLCZPP",
         true
     ],
@@ -279,7 +279,7 @@
         "8190",
         "Sparkasse Oberlausitz-Niederschlesien",
         null,
-        false
+        true
     ],
     [
         "8198",
@@ -295,7 +295,7 @@
     ],
     [
         "8200",
-        "PRIVAT BANK der Raiffeisenlandesbank Ober\u00f6sterreich Aktiengesellschaft, pobo\u010dka \u010cesk\u00e1 republika",
+        "PRIVAT BANK der Raiffeisenlandesbank Oberösterreich Aktiengesellschaft, pobočka Česká republika",
         null,
         false
     ],
@@ -325,21 +325,21 @@
     ],
     [
         "8240",
-        "Dru\u017estevn\u00ed z\u00e1lo\u017ena Kredit",
+        "Družstevní záložna Kredit",
         null,
         false
     ],
     [
         "8250",
-        "Bank of China (Hungary) Close Ltd. Prague branch, od\u0161t\u011bpn\u00fd z\u00e1vod",
+        "Bank of China (CEE) Ltd. Prague Branch",
         "BKCHCZPP",
         true
     ],
     [
         "8255",
-        "Bank of Communications Co., Ltd., Prague Branch od\u0161t\u011bpn\u00fd z\u00e1vod",
+        "Bank of Communications Co., Ltd., Prague Branch odštěpný závod",
         "COMMCZPP",
-        false
+        true
     ],
     [
         "8260",
@@ -349,7 +349,7 @@
     ],
     [
         "8265",
-        "Industrial and Commercial Bank of China Limited, Prague Branch, od\u0161t\u011bpn\u00fd z\u00e1vod",
+        "Industrial and Commercial Bank of China Limited, Prague Branch, odštěpný závod",
         "ICBKCZPP",
         true
     ],
@@ -360,21 +360,21 @@
         false
     ],
     [
+        "8272",
+        "VIVA PAYMENT SERVICES S.A. odštěpný závod",
+        "VPAYCZP2",
+        false
+    ],
+    [
         "8280",
         "B-Efekt a.s.",
         "BEFKCZP1",
         false
     ],
     [
-        "8282",
-        "Beekash Payment Solutions, s.r.o.",
-        "BPORCZ22",
-        false
-    ],
-    [
         "8283",
         "Qpay s.r.o.",
-        null,
+        "QPSRCZPP",
         false
     ],
     [
