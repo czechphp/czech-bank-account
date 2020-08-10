@@ -19,7 +19,7 @@
         "ext-json": "*"
     },
     "require-dev": {
-        "phpunit/phpunit": "^7.0"
+        "phpunit/phpunit": "^7.5"
     },
     "authors": [
         {
@@ -36,10 +36,5 @@
         "psr-4": {
             "Czechphp\\CzechBankAccount\\Tests\\": "tests/"
         }
-    },
-    "scripts": {
-        "test": [
-            "phpunit"
-        ]
     }
 }
