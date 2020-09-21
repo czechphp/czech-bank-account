@@ -102,6 +102,16 @@ class BankAccountNumberValidatorTest extends TestCase
         );
     }
 
+    public function testFirstPartNoDigits()
+    {
+        $validator = new BankAccountNumberValidator();
+
+        $this->assertSame(
+            BankAccountNumberValidator::ERROR_FORMAT_VARIABLE,
+            $validator->validate('-19')
+        );
+    }
+
     public function testSecondPartInvalidChecksum()
     {
         $validator = new BankAccountNumberValidator();

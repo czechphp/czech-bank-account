@@ -39,7 +39,7 @@ final class BankAccountNumberValidator implements ValidatorInterface
     /**
      * Regular expression of account number with variable length and dash as separator
      */
-    private const REGEX_VARIABLE = '/^((?<first>[0-9]{0,6})-)?(?<second>[0-9]{2,10})$/';
+    private const REGEX_VARIABLE = '/^((?<first>[0-9]{1,6})-)?(?<second>[0-9]{2,10})$/';
 
     /**
      * Regular expression of account number composed of only digits with constant length
