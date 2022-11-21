@@ -6,20 +6,9 @@ namespace Czechphp\CzechBankAccount\ConstantSymbol\Filter;
 
 final class ArrayCacheFilter implements FilterInterface
 {
-    /**
-     * @var FilterInterface
-     */
-    private $filter;
-
-    /**
-     * @var array|null
-     */
-    private $lastCriteria;
-
-    /**
-     * @var array|null
-     */
-    private $lastFiltered;
+    private FilterInterface $filter;
+    private ?array $lastCriteria = null;
+    private ?array $lastFiltered = null;
 
     public function __construct(FilterInterface $filter)
     {

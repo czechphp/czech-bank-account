@@ -9,20 +9,15 @@ class SpecificSymbolValidatorTest extends TestCase
 {
     /**
      * @dataProvider validProvider
-     *
-     * @param string $value
      */
-    public function testValid(string $value)
+    public function testValid(string $value): void
     {
         $validator = new SpecificSymbolValidator();
 
         $this->assertSame(SpecificSymbolValidator::ERROR_NONE, $validator->validate($value));
     }
 
-    /**
-     * @return array
-     */
-    public function validProvider()
+    public function validProvider(): array
     {
         return [
             [''],
@@ -33,14 +28,14 @@ class SpecificSymbolValidatorTest extends TestCase
         ];
     }
 
-    public function testTooLong()
+    public function testTooLong(): void
     {
         $validator = new SpecificSymbolValidator();
 
         $this->assertSame(SpecificSymbolValidator::ERROR_FORMAT, $validator->validate('12345678901'));
     }
 
-    public function testInvalidCharacter()
+    public function testInvalidCharacter(): void
     {
         $validator = new SpecificSymbolValidator();
 

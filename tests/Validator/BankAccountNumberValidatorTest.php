@@ -7,7 +7,7 @@ use PHPUnit\Framework\TestCase;
 
 class BankAccountNumberValidatorTest extends TestCase
 {
-    public function testInvalidTypeOption()
+    public function testInvalidTypeOption(): void
     {
         $validator = new BankAccountNumberValidator();
 
@@ -19,11 +19,8 @@ class BankAccountNumberValidatorTest extends TestCase
 
     /**
      * @dataProvider validProvider
-     *
-     * @param string $value
-     * @param array $options
      */
-    public function testValid(string $value, array $options = [])
+    public function testValid(string $value, array $options = []): void
     {
         $validator = new BankAccountNumberValidator();
 
@@ -33,10 +30,7 @@ class BankAccountNumberValidatorTest extends TestCase
         );
     }
 
-    /**
-     * @return array
-     */
-    public function validProvider()
+    public function validProvider(): array
     {
         return [
             // smallest possible number
@@ -52,7 +46,7 @@ class BankAccountNumberValidatorTest extends TestCase
         ];
     }
 
-    public function testVariableTypeTooShortNumber()
+    public function testVariableTypeTooShortNumber(): void
     {
         $validator = new BankAccountNumberValidator();
 
@@ -62,7 +56,7 @@ class BankAccountNumberValidatorTest extends TestCase
         );
     }
 
-    public function testConstantTypeTooShortNumber()
+    public function testConstantTypeTooShortNumber(): void
     {
         $validator = new BankAccountNumberValidator();
 
@@ -72,7 +66,7 @@ class BankAccountNumberValidatorTest extends TestCase
         );
     }
 
-    public function testVariableTypeTooLongNumber()
+    public function testVariableTypeTooLongNumber(): void
     {
         $validator = new BankAccountNumberValidator();
 
@@ -82,7 +76,7 @@ class BankAccountNumberValidatorTest extends TestCase
         );
     }
 
-    public function testConstantTypeTooLongNumber()
+    public function testConstantTypeTooLongNumber(): void
     {
         $validator = new BankAccountNumberValidator();
 
@@ -92,7 +86,7 @@ class BankAccountNumberValidatorTest extends TestCase
         );
     }
 
-    public function testFirstPartInvalidChecksum()
+    public function testFirstPartInvalidChecksum(): void
     {
         $validator = new BankAccountNumberValidator();
 
@@ -102,7 +96,7 @@ class BankAccountNumberValidatorTest extends TestCase
         );
     }
 
-    public function testFirstPartNoDigits()
+    public function testFirstPartNoDigits(): void
     {
         $validator = new BankAccountNumberValidator();
 
@@ -112,7 +106,7 @@ class BankAccountNumberValidatorTest extends TestCase
         );
     }
 
-    public function testSecondPartInvalidChecksum()
+    public function testSecondPartInvalidChecksum(): void
     {
         $validator = new BankAccountNumberValidator();
 

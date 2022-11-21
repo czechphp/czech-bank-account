@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 class ArrayCacheFilterTest extends TestCase
 {
-    public function testCachedDataIsUsed()
+    public function testCachedDataIsUsed(): void
     {
         $decoratedFilter = $this->createMock(FilterInterface::class);
         $decoratedFilter->expects($this->once())->method('filter')->willReturn([]);
@@ -19,7 +19,7 @@ class ArrayCacheFilterTest extends TestCase
         $this->assertEqualsCanonicalizing([], $filter->filter(['include' => ['all']]));
     }
 
-    public function testCachedDataIsDiscardedOnNewCriteria()
+    public function testCachedDataIsDiscardedOnNewCriteria(): void
     {
         $decoratedFilter = $this->createMock(FilterInterface::class);
         $decoratedFilter->expects($this->exactly(2))->method('filter')->willReturn([]);

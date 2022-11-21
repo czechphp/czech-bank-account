@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 final class ChainLoaderTest extends TestCase
 {
-    public function testFirstSuccess()
+    public function testFirstSuccess(): void
     {
         $loader1 = $this->createMock(LoaderInterface::class);
         $loader1->expects($this->once())->method('load')->willReturn([]);
@@ -23,7 +23,7 @@ final class ChainLoaderTest extends TestCase
         $this->assertSame([], $bankCode->load());
     }
 
-    public function testSecondSuccess()
+    public function testSecondSuccess(): void
     {
         $loader1 = $this->createMock(LoaderInterface::class);
         $loader1->expects($this->once())->method('load')->willThrowException(new LogicException());
@@ -41,7 +41,7 @@ final class ChainLoaderTest extends TestCase
         $this->assertSame([], $bankCode->load());
     }
 
-    public function testEmpty()
+    public function testEmpty(): void
     {
         $bankCode = new ChainLoader([]);
 

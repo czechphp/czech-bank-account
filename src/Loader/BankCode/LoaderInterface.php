@@ -38,8 +38,6 @@ interface LoaderInterface
     public const CERTIS = 3;
 
     /**
-     * @return array
-     *
      * @throws LogicException
      */
     public function load(): array;

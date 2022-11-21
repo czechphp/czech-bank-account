@@ -10,10 +10,7 @@ use function in_array;
 
 final class Filter implements FilterInterface
 {
-    /**
-     * @var LoaderInterface
-     */
-    private $loader;
+    private LoaderInterface $loader;
 
     public function __construct(LoaderInterface $loader)
     {

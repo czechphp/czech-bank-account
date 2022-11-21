@@ -12,11 +12,9 @@ final class ChainLoader implements LoaderInterface
     /**
      * @var LoaderInterface[]
      */
-    private $loaders;
+    private array $loaders;
 
     /**
-     * ChainLoader constructor.
-     *
      * @param LoaderInterface[] $loaders
      */
     public function __construct(array $loaders)

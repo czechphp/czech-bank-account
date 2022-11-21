@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 class BankCodeValidatorTest extends TestCase
 {
-    public function testValid()
+    public function testValid(): void
     {
         $loader = $this->createMock(LoaderInterface::class);
         $loader->expects($this->once())->method('load')->willReturn([
@@ -26,7 +26,7 @@ class BankCodeValidatorTest extends TestCase
         $this->assertSame(SpecificSymbolValidator::ERROR_NONE, $validator->validate('0001'));
     }
 
-    public function testNonExistentCode()
+    public function testNonExistentCode(): void
     {
         $loader = $this->createMock(LoaderInterface::class);
         $loader->expects($this->once())->method('load')->willReturn([
@@ -40,7 +40,7 @@ class BankCodeValidatorTest extends TestCase
         $this->assertSame(BankCodeValidator::ERROR_INVALID_CODE, $validator->validate('0002'));
     }
 
-    public function testTooLong()
+    public function testTooLong(): void
     {
         $loader = $this->createMock(LoaderInterface::class);
         $loader->expects($this->never())->method('load');
@@ -50,7 +50,7 @@ class BankCodeValidatorTest extends TestCase
         $this->assertSame(BankCodeValidator::ERROR_FORMAT, $validator->validate('12345678901'));
     }
 
-    public function testInvalidCharacter()
+    public function testInvalidCharacter(): void
     {
         $loader = $this->createMock(LoaderInterface::class);
         $loader->expects($this->never())->method('load');

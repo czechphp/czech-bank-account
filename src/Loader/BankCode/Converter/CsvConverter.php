@@ -4,7 +4,7 @@ declare(strict_types = 1);
 
 namespace Czechphp\CzechBankAccount\Loader\BankCode\Converter;
 
-use Czechphp\CzechBankAccount\Loader\BankCode\ChainLoader;
+use Czechphp\CzechBankAccount\Loader\BankCode\LoaderInterface;
 use function fgetcsv;
 use function fopen;
 use function fwrite;
@@ -19,10 +19,7 @@ final class CsvConverter implements ConverterInterface
     private const INDEX_BIC = 2;
     private const INDEX_CERTIS = 3;
 
-    /**
-     * @var string
-     */
-    private $delimiter;
+    private string $delimiter;
 
     public function __construct(string $delimiter = self::DELIMITER)
     {
@@ -41,10 +38,10 @@ final class CsvConverter implements ConverterInterface
         while (($row = fgetcsv($handle, 0, $this->delimiter)) !== false) {
             if (preg_match('/^\d{4}$/', trim($row[self::INDEX_CODE])) === 1) {
                 $data[] = [
-                    ChainLoader::CODE => trim($row[self::INDEX_CODE]),
-                    ChainLoader::NAME => trim($row[self::INDEX_NAME]),
-                    ChainLoader::BIC => trim($row[self::INDEX_BIC]) ?: null,
-                    ChainLoader::CERTIS => trim($row[self::INDEX_CERTIS]) === 'A',
+                    LoaderInterface::CODE => trim($row[self::INDEX_CODE]),
+                    LoaderInterface::NAME => trim($row[self::INDEX_NAME]),
+                    LoaderInterface::BIC => trim($row[self::INDEX_BIC]) ?: null,
+                    LoaderInterface::CERTIS => trim($row[self::INDEX_CERTIS]) === 'A',
                 ];
             }
         }

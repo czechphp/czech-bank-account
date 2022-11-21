@@ -8,28 +8,28 @@ use PHPUnit\Framework\TestCase;
 
 class ConstantSymbolValidatorTest extends TestCase
 {
-    public function testValidNumberFormat()
+    public function testValidNumberFormat(): void
     {
         $validator = new ConstantSymbolValidator();
 
         $this->assertSame(ConstantSymbolValidator::ERROR_NONE, $validator->validate('0001'));
     }
 
-    public function testValidNumberFormatWithSpaces()
+    public function testValidNumberFormatWithSpaces(): void
     {
         $validator = new ConstantSymbolValidator();
 
         $this->assertSame(ConstantSymbolValidator::ERROR_NONE, $validator->validate(' 0001  '));
     }
 
-    public function testInvalidNumberFormat()
+    public function testInvalidNumberFormat(): void
     {
         $validator = new ConstantSymbolValidator();
 
         $this->assertSame(ConstantSymbolValidator::ERROR_FORMAT, $validator->validate('f00012'));
     }
 
-    public function testFilterIsNotUsedWhenNotSet()
+    public function testFilterIsNotUsedWhenNotSet(): void
     {
         $filter = $this->createMock(FilterInterface::class);
 
@@ -41,7 +41,7 @@ class ConstantSymbolValidatorTest extends TestCase
         );
     }
 
-    public function testFilterIsNotUsedWhenNull()
+    public function testFilterIsNotUsedWhenNull(): void
     {
         $filter = $this->createMock(FilterInterface::class);
 
@@ -53,7 +53,7 @@ class ConstantSymbolValidatorTest extends TestCase
         );
     }
 
-    public function testFilterIsUsed()
+    public function testFilterIsUsed(): void
     {
         $filter = $this->createMock(FilterInterface::class);
 
@@ -65,7 +65,7 @@ class ConstantSymbolValidatorTest extends TestCase
         );
     }
 
-    public function testValidWhenFilterIsUsed()
+    public function testValidWhenFilterIsUsed(): void
     {
         $filter = $this->createMock(FilterInterface::class);
         $filter->expects($this->once())->method('filter')->willReturn([

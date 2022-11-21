@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 final class FileGetContentsLoaderTest extends TestCase
 {
-    public function testSuccess()
+    public function testSuccess(): void
     {
         $converter = $this->createMock(ConverterInterface::class);
 
@@ -20,7 +20,7 @@ final class FileGetContentsLoaderTest extends TestCase
         $this->assertSame(['foo'], $handler->load());
     }
 
-    public function testFail()
+    public function testFail(): void
     {
         $converter = $this->createMock(ConverterInterface::class);
 

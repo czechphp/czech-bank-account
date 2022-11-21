@@ -15,10 +15,7 @@ final class ConstantSymbolValidator implements ValidatorInterface
     public const ERROR_FORMAT = 1;
     public const ERROR_INVALID_CODE = 2;
 
-    /**
-     * @var FilterInterface|null
-     */
-    private $filter;
+    private ?FilterInterface $filter;
 
     public function __construct(FilterInterface $filter = null)
     {

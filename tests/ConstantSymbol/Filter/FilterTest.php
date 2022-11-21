@@ -26,7 +26,7 @@ class FilterTest extends TestCase
         ],
     ];
 
-    public function testSuccess()
+    public function testSuccess(): void
     {
         $loader = $this->createMock(LoaderInterface::class);
         $loader->expects($this->once())->method('load')->willReturn(self::DATASET);
@@ -36,7 +36,7 @@ class FilterTest extends TestCase
         $this->assertEqualsCanonicalizing(self::DATASET, $filter->filter());
     }
 
-    public function testIncludeSingleGroup()
+    public function testIncludeSingleGroup(): void
     {
         $loader = $this->createMock(LoaderInterface::class);
         $loader->expects($this->once())->method('load')->willReturn(self::DATASET);
@@ -61,7 +61,7 @@ class FilterTest extends TestCase
         ]));
     }
 
-    public function testIncludeMultipleGroups()
+    public function testIncludeMultipleGroups(): void
     {
         $loader = $this->createMock(LoaderInterface::class);
         $loader->expects($this->once())->method('load')->willReturn(self::DATASET);
@@ -86,7 +86,7 @@ class FilterTest extends TestCase
         ]));
     }
 
-    public function testIncludeGroupAndCode()
+    public function testIncludeGroupAndCode(): void
     {
         $loader = $this->createMock(LoaderInterface::class);
         $loader->expects($this->once())->method('load')->willReturn(self::DATASET);
@@ -116,7 +116,7 @@ class FilterTest extends TestCase
         ]));
     }
 
-    public function testExcludeGroup()
+    public function testExcludeGroup(): void
     {
         $loader = $this->createMock(LoaderInterface::class);
         $loader->expects($this->once())->method('load')->willReturn(self::DATASET);
@@ -137,7 +137,7 @@ class FilterTest extends TestCase
         ]));
     }
 
-    public function testExcludeGroupAndCode()
+    public function testExcludeGroupAndCode(): void
     {
         $loader = $this->createMock(LoaderInterface::class);
         $loader->expects($this->once())->method('load')->willReturn(self::DATASET);

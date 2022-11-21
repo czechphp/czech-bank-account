@@ -12,10 +12,7 @@ final class BankCodeValidator implements ValidatorInterface
     public const ERROR_INVALID_CODE = 1;
     public const ERROR_FORMAT = 2;
 
-    /**
-     * @var LoaderInterface
-     */
-    private $loader;
+    private LoaderInterface $loader;
 
     public function __construct(LoaderInterface $loader)
     {

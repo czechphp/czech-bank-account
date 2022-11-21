@@ -8,7 +8,7 @@ use PHPUnit\Framework\TestCase;
 
 final class JsonConverterTest extends TestCase
 {
-    public function testEmpty()
+    public function testEmpty(): void
     {
         $converter = new JsonConverter();
 
@@ -18,7 +18,7 @@ final class JsonConverterTest extends TestCase
         $converter->convert('');
     }
 
-    public function testValid()
+    public function testValid(): void
     {
         $converter = new JsonConverter();
 
@@ -57,7 +57,7 @@ JSON;
         $this->assertSame($expects, $converter->convert($contents));
     }
 
-    public function testInvalidJson()
+    public function testInvalidJson(): void
     {
         $converter = new JsonConverter();
 
@@ -67,7 +67,7 @@ JSON;
         $converter->convert('This is not valid json');
     }
 
-    public function testNullJson()
+    public function testNullJson(): void
     {
         $converter = new JsonConverter();
 

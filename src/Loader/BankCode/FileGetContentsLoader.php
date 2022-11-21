@@ -10,15 +10,8 @@ use Czechphp\CzechBankAccount\Loader\BankCode\Exception\LogicException;
 
 final class FileGetContentsLoader implements LoaderInterface
 {
-    /**
-     * @var ConverterInterface
-     */
-    private $converter;
-
-    /**
-     * @var string
-     */
-    private $uri;
+    private ConverterInterface $converter;
+    private string $uri;
 
     public function __construct(ConverterInterface $converter = null, string $uri = self::DATA_REMOTE_CSV)
     {

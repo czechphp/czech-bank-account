@@ -15,22 +15,10 @@ use const PHP_MAXPATHLEN;
 
 final class FilesystemLoader implements LoaderInterface
 {
-    /**
-     * @var string
-     */
-    private $filename;
+    private string $filename;
+    private ConverterInterface $converter;
 
     /**
-     * @var ConverterInterface
-     */
-    private $converter;
-
-    /**
-     * FilesystemLoader constructor.
-     *
-     * @param string $filename
-     * @param ConverterInterface|null $converter
-     *
      * @throws InvalidArgumentException
      */
     public function __construct(string $filename = self::DATA_LOCAL_JSON, ConverterInterface $converter = null)

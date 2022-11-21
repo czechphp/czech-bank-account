@@ -10,11 +10,8 @@ class BankAccountNumberFormatConverterTest extends TestCase
 {
     /**
      * @dataProvider convertVariableToConstantProvider
-     *
-     * @param string $expected
-     * @param string $value
      */
-    public function testConvertVariableToConstant(string $expected, string $value)
+    public function testConvertVariableToConstant(string $expected, string $value): void
     {
         $this->assertSame($expected, BankAccountNumberFormatConverter::convertVariableToConstant($value));
     }
@@ -34,7 +31,7 @@ class BankAccountNumberFormatConverterTest extends TestCase
         ];
     }
 
-    public function testConvertVariableToConstantThrowsException()
+    public function testConvertVariableToConstantThrowsException(): void
     {
         $this->expectException(InvalidArgumentException::class);
 
@@ -43,11 +40,8 @@ class BankAccountNumberFormatConverterTest extends TestCase
 
     /**
      * @dataProvider convertConstantToVariableProvider
-     *
-     * @param string $expected
-     * @param string $value
      */
-    public function testConvertConstantToVariable(string $expected, string $value)
+    public function testConvertConstantToVariable(string $expected, string $value): void
     {
         $this->assertSame($expected, BankAccountNumberFormatConverter::convertConstantToVariable($value));
     }
@@ -63,7 +57,7 @@ class BankAccountNumberFormatConverterTest extends TestCase
         ];
     }
 
-    public function testConvertConstantToVariableThrowsException()
+    public function testConvertConstantToVariableThrowsException(): void
     {
         $this->expectException(InvalidArgumentException::class);
 

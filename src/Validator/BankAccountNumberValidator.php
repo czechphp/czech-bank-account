@@ -100,7 +100,7 @@ final class BankAccountNumberValidator implements ValidatorInterface
         return self::ERROR_NONE;
     }
 
-    private function defaultOptions(array $options)
+    private function defaultOptions(array $options): array
     {
         return array_replace([
             self::OPTION_TYPE => self::OPTION_TYPE_VARIABLE,

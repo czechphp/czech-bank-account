@@ -7,14 +7,14 @@ use PHPUnit\Framework\TestCase;
 
 final class CsvConverterTest extends TestCase
 {
-    public function testEmpty()
+    public function testEmpty(): void
     {
         $converter = new CsvConverter();
 
         $this->assertSame([], $converter->convert(''));
     }
 
-    public function testValid()
+    public function testValid(): void
     {
         $converter = new CsvConverter();
         $contents = <<<CSV

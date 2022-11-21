@@ -9,7 +9,7 @@ use PHPUnit\Framework\TestCase;
 
 final class ArrayRequireLoaderTest extends TestCase
 {
-    public function testDefaultDataHasExpectedFormat()
+    public function testDefaultDataHasExpectedFormat(): void
     {
         $loader = new ArrayRequireLoader();
         $data = $loader->load();
@@ -33,7 +33,7 @@ final class ArrayRequireLoaderTest extends TestCase
         }
     }
 
-    public function testFailsOnInvalidFilename()
+    public function testFailsOnInvalidFilename(): void
     {
         $this->expectException(InvalidArgumentException::class);
 

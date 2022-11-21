@@ -12,14 +12,14 @@ use const PHP_MAXPATHLEN;
 
 final class FilesystemLoaderTest extends TestCase
 {
-    public function testSuccess()
+    public function testSuccess(): void
     {
         $handler = new FilesystemLoader();
 
         $this->assertGreaterThan(0, count($handler->load()));
     }
 
-    public function testInvalidPathLength()
+    public function testInvalidPathLength(): void
     {
         $filename = str_pad('/', PHP_MAXPATHLEN, 'a');
 
@@ -28,7 +28,7 @@ final class FilesystemLoaderTest extends TestCase
         new FilesystemLoader($filename);
     }
 
-    public function testNonReadable()
+    public function testNonReadable(): void
     {
         $handler = new FilesystemLoader(__DIR__ . '/this_does_not_exist.json');
 

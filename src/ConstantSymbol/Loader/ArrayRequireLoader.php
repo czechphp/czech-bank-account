@@ -12,15 +12,8 @@ final class ArrayRequireLoader implements LoaderInterface
 {
     public const DATA_FILE = __DIR__ . '/../../../data/constant-symbols.php';
 
-    /**
-     * @var array
-     */
-    private $data;
-
-    /**
-     * @var string
-     */
-    private $filename;
+    private string $filename;
+    private ?array $data = null;
 
     public function __construct(string $filename = self::DATA_FILE)
     {
