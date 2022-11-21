@@ -10,9 +10,21 @@ permissions:
   contents: read
 
 jobs:
-  build:
-
+  phpunit:
+    name: PHPUnit
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        php-version:
+          - "7.4"
+          - "8.0"
+          - "8.1"
+        dependencies:
+          - "highest"
+        include:
+          - php-version: "7.4"
+            dependencies: "lowest"
 
     steps:
     - uses: actions/checkout@v3
@@ -34,19 +46,3 @@ jobs:
 
     - name: Run PHPUnit
       run: vendor/bin/phpunit --coverage-clover=coverage.xml
-
-  phpunit:
-    name: "PHPUnit"
-    runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-        php-version:
-          - "7.4"
-          - "8.0"
-          - "8.1"
-        dependencies:
-          - "highest"
-        include:
-          - php-version: "7.4"
-            dependencies: "lowest"
