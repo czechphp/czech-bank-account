@@ -200,7 +200,15 @@ In default loads data bundled with library, but can be set to read from any file
 
 #### FileGetContentsLoader
 
-Loads data from [official remote source](https://www.cnb.cz/en/payments/accounts-bank-codes/).
+Loads data from [official remote source](https://www.cnb.cz/en/payments/accounts-bank-codes/) using `file_get_contents`.
+
+#### SymfonyHttpClientLoader
+
+Loads data from [official remote source](https://www.cnb.cz/en/payments/accounts-bank-codes/) using http client implementing [symfony/http-client-implementation](https://packagist.org/providers/symfony/http-client-implementation).
+
+##### SymfonyCachedLoader
+
+Decorator loader caches result from parent loader using cache client implementing [symfony/cache-implementation](https://packagist.org/providers/symfony/cache-implementation).
 
 #### ChainLoader
 
