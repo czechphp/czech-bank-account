@@ -49,7 +49,7 @@
     ],
     [
         "2100",
-        "Hypoteční banka, a.s.",
+        "ČSOB Hypoteční banka, a.s.",
         null,
         true
     ],
@@ -102,12 +102,6 @@
         true
     ],
     [
-        "3050",
-        "BNP Paribas Personal Finance SA, odštěpný závod",
-        "BPPFCZP1",
-        true
-    ],
-    [
         "3060",
         "PKO BP S.A., Czech Branch",
         "BPKOCZPP",
@@ -121,7 +115,7 @@
     ],
     [
         "4000",
-        "Max banka a.s.",
+        "doběh plateb ve prospěch Banky CREDITAS a.s.",
         "EXPNCZPP",
         true
     ],
@@ -150,12 +144,6 @@
         true
     ],
     [
-        "6100",
-        "Raiffeisenbank a.s. (do 31. 12. 2021 Equa bank a.s.)",
-        null,
-        true
-    ],
-    [
         "6200",
         "COMMERZBANK Aktiengesellschaft, pobočka Praha",
         "COBACZPX",
@@ -171,6 +159,12 @@
         "6300",
         "BNP Paribas S.A., pobočka Česká republika",
         "GEBACZPP",
+        true
+    ],
+    [
+        "6363",
+        "Partners Banka, a.s.",
+        null,
         true
     ],
     [
@@ -258,33 +252,9 @@
         false
     ],
     [
-        "8199",
-        "MoneyPolo Europe s.r.o.",
-        "MOUSCZP2",
-        false
-    ],
-    [
-        "8200",
-        "PRIVAT BANK der Raiffeisenlandesbank Oberösterreich Aktiengesellschaft, pobočka Česká republika",
-        null,
-        false
-    ],
-    [
         "8220",
         "Payment execution s.r.o.",
         "PAERCZP1",
-        false
-    ],
-    [
-        "8230",
-        "ABAPAY s.r.o.",
-        null,
-        false
-    ],
-    [
-        "8240",
-        "Družstevní záložna Kredit, v likvidaci",
-        null,
         false
     ],
     [
@@ -306,27 +276,9 @@
         true
     ],
     [
-        "8270",
-        "Fairplay Pay s.r.o.",
-        "FAPOCZP1",
-        false
-    ],
-    [
         "8280",
         "B-Efekt a.s.",
         "BEFKCZP1",
-        false
-    ],
-    [
-        "8293",
-        "Mercurius partners s.r.o.",
-        "MRPSCZPP",
-        false
-    ],
-    [
-        "8299",
-        "BESTPAY s.r.o.",
-        "BEORCZP2",
         false
     ],
     [
