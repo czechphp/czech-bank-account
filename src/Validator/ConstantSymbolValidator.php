@@ -7,6 +7,7 @@ namespace Czechphp\CzechBankAccount\Validator;
 use Czechphp\CzechBankAccount\ConstantSymbol\Filter\FilterInterface;
 use Czechphp\CzechBankAccount\ConstantSymbol\Loader\LoaderInterface;
 use function preg_match;
+use function trigger_deprecation;
 use function trim;
 
 final class ConstantSymbolValidator implements ValidatorInterface
@@ -19,6 +20,10 @@ final class ConstantSymbolValidator implements ValidatorInterface
 
     public function __construct(FilterInterface $filter = null)
     {
+        if ($filter !== null) {
+            trigger_deprecation('czechphp/czech-bank-account', '1.3.2', 'The argument $filter is deprecated.');
+        }
+
         $this->filter = $filter;
     }
 
@@ -31,6 +36,8 @@ final class ConstantSymbolValidator implements ValidatorInterface
         }
 
         if ($this->filter !== null && isset($options['filter'])) {
+            trigger_deprecation('czechphp/czech-bank-account', '1.3.2', 'The option \'filter\' is deprecated.');
+
             if ($this->isCodeInExpectedRange($value, $options) === false) {
                 return self::ERROR_INVALID_CODE;
             }

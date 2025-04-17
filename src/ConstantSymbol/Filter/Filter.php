@@ -7,7 +7,13 @@ namespace Czechphp\CzechBankAccount\ConstantSymbol\Filter;
 use Czechphp\CzechBankAccount\ConstantSymbol\Loader\LoaderInterface;
 use function array_filter;
 use function in_array;
+use function trigger_deprecation;
 
+trigger_deprecation('czechphp/czech-bank-account', '1.3.2', 'The "%s" class is deprecated, with no replacement.', Filter::class);
+
+/**
+ * @deprecated since czechphp/czech-bank-account 1.3.2, with no replacement.
+ */
 final class Filter implements FilterInterface
 {
     private LoaderInterface $loader;

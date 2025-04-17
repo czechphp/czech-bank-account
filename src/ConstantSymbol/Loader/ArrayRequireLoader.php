@@ -7,7 +7,13 @@ namespace Czechphp\CzechBankAccount\ConstantSymbol\Loader;
 use InvalidArgumentException;
 use function file_exists;
 use function sprintf;
+use function trigger_deprecation;
 
+trigger_deprecation('czechphp/czech-bank-account', '1.3.2', 'The "%s" class is deprecated, with no replacement.', ArrayRequireLoader::class);
+
+/**
+ * @deprecated since czechphp/czech-bank-account 1.3.2, with no replacement.
+ */
 final class ArrayRequireLoader implements LoaderInterface
 {
     public const DATA_FILE = __DIR__ . '/../../../data/constant-symbols.php';
