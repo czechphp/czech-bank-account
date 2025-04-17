@@ -105,7 +105,7 @@ if ($violation === ConstantSymbolValidator::ERROR_NONE) {
 }
 ```
 
-To use optional validation against database of known constant symbols, 
+(_**Deprecated**_) To use optional validation against database of known constant symbols, 
 validator needs `Filter` instance in the constructor and `filter` option in the `validate` methods call.
 
 ```php
@@ -127,7 +127,7 @@ if ($violation === ConstantSymbolValidator::ERROR_NONE) {
 }
 ```
 
-### Constant Symbol Component
+### Constant Symbol Component (_Deprecated_)
 
 Loads list of known constant symbols and filters out specified categories and symbols.
 
