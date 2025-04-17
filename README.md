@@ -1,8 +1,5 @@
 # Czech Bank Account
 
-[![Build Status](https://travis-ci.com/czechphp/czech-bank-account.svg?branch=master)](https://travis-ci.com/czechphp/czech-bank-account)
-[![codecov](https://codecov.io/gh/czechphp/czech-bank-account/branch/master/graph/badge.svg)](https://codecov.io/gh/czechphp/czech-bank-account)
-
 Provides useful utilities for czech bank account validation and data manipulation.
 
 ## Installation
