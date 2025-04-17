@@ -26,6 +26,9 @@ final class CsvConverter implements ConverterInterface
         $this->delimiter = $delimiter;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function convert(string $content): array
     {
         $handle = fopen('php://memory', 'w+');

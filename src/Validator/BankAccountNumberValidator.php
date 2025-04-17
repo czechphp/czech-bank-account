@@ -63,6 +63,9 @@ final class BankAccountNumberValidator implements ValidatorInterface
         10 => 6,
     ];
 
+    /**
+     * {@inheritDoc}
+     */
     public function validate(string $value, array $options = []): int
     {
         $options = $this->defaultOptions($options);

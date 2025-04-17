@@ -31,6 +31,9 @@ final class FilesystemLoader implements LoaderInterface
         }
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function load(): array
     {
         if (!is_readable($this->filename)) {

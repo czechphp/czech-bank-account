@@ -9,9 +9,7 @@ use Czechphp\CzechBankAccount\Loader\BankCode\Exception\LogicException;
 interface ConverterInterface
 {
     /**
-     * @param string $content
-     *
-     * @return array
+     * @return array<array-key, array{0: string, 1: string, 2: string|null, 3: bool}>
      *
      * @throws LogicException
      */

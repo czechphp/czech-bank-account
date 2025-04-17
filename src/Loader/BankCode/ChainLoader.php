@@ -22,6 +22,9 @@ final class ChainLoader implements LoaderInterface
         $this->loaders = $loaders;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function load(): array
     {
         foreach ($this->loaders as $loader) {

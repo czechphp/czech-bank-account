@@ -18,10 +18,6 @@ final class BankAccountNumberFormatConverter
      * Converts bank account number from variable length format to constant length format.
      * Acceptable separator is whitespace and dash character. For example "19-19" or "19 19".
      *
-     * @param string $string
-     *
-     * @return string
-     *
      * @throws InvalidArgumentException
      */
     public static function convertVariableToConstant(string $string): string
@@ -35,10 +31,6 @@ final class BankAccountNumberFormatConverter
 
     /**
      * Converts bank account number from constant length format to variable length format.
-     *
-     * @param string $string
-     *
-     * @return string
      *
      * @throws InvalidArgumentException
      */

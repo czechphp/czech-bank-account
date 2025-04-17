@@ -27,6 +27,9 @@ final class ConstantSymbolValidator implements ValidatorInterface
         $this->filter = $filter;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function validate(string $value, array $options = []): int
     {
         $value = trim($value);

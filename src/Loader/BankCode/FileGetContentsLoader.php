@@ -19,6 +19,9 @@ final class FileGetContentsLoader implements LoaderInterface
         $this->uri = $uri;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function load(): array
     {
         $level = error_reporting(0);

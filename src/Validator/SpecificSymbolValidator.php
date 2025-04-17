@@ -12,6 +12,9 @@ final class SpecificSymbolValidator implements ValidatorInterface
     public const ERROR_NONE = 0;
     public const ERROR_FORMAT = 1;
 
+    /**
+     * {@inheritDoc}
+     */
     public function validate(string $value, array $options = []): int
     {
         if (preg_match('/^\d{0,10}$/', trim($value)) !== 1) {

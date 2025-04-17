@@ -19,6 +19,9 @@ final class BankCodeValidator implements ValidatorInterface
         $this->loader = $loader;
     }
 
+    /**
+     * {@inheritDoc}
+     */
     public function validate(string $value, array $options = []): int
     {
         $value = trim($value);
