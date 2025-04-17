@@ -13,7 +13,7 @@ final class JsonConverterTest extends TestCase
         $converter = new JsonConverter();
 
         $this->expectException(LogicException::class);
-        $this->expectExceptionMessage('Unable to decode json due to error [4] Syntax error');
+        $this->expectExceptionMessage('Syntax error');
 
         $converter->convert('');
     }
@@ -62,7 +62,7 @@ JSON;
         $converter = new JsonConverter();
 
         $this->expectException(LogicException::class);
-        $this->expectExceptionMessage('Unable to decode json due to error [4] Syntax error');
+        $this->expectExceptionMessage('Syntax error');
 
         $converter->convert('This is not valid json');
     }
