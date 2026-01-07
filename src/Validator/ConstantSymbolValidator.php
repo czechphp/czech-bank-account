@@ -11,7 +11,6 @@ final class ConstantSymbolValidator implements ValidatorInterface
 {
     public const ERROR_NONE = 0;
     public const ERROR_FORMAT = 1;
-    public const ERROR_INVALID_CODE = 2;
 
     /**
      * {@inheritDoc}

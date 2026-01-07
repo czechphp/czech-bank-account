@@ -1,6 +1,11 @@
 CHANGELOG
 =========
 
+2.0.0
+-----
+
+* Removed deprecated classes.
+
 1.3.2
 -----
 
